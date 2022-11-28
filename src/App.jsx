@@ -5,6 +5,7 @@ import Post from "./components/Post";
 function App() {
   const [counter, setCounter] = useState(0);
   const increment = () => setCounter((prevCounter) => prevCounter + 1);
+  console.log("app-render")
   return (
     <div className="App">
       <Post title="Post-1" />
