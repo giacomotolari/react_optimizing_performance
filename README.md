@@ -21,5 +21,5 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 
 ## what we will learn?
 
--  Optimizing the components with React Memo (branch: memo)
--  Optimizing the functions components with useCallback and useMemo  (branch: useCallback and useMemo)
+-  Optimizing the components with React Memo (branches: memo-problem, memo-solution)
+-  Optimizing the functions components with useCallback and useMemo  (branches: useCallback-problem and useMemo-solution)
