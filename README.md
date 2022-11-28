@@ -17,6 +17,8 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 -  Optimizing the functions components with useCallback and useMemo
 -  Use lazy load component
 -  Use lazy load image
+-  Load Component when is in the viewport 
+https://stackoverflow.com/questions/53757229/reactjs-how-to-render-a-component-only-when-scroll-down-and-reach-it-on-the-page
 -  Delete unused code and imports
 
 ## what we will learn?
