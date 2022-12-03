@@ -1,15 +1,13 @@
-# React.memo with props.children
+# Props Exercise - Blog Page
 
 ## what's going on?
 
-By clicking the 'increment' button, we can see that the console.log(title) still appears in the 'Post' component which has as title-props: 'title 1'.
+In App.jsx we have three "<section>", each section is a post.
+You can see that each section contain almost the same HTMl.
 
-## why?
+## Task
 
-In the componet Post we are passing in the props-obj children as property. Only Post-1 defines/uses in App.jsx.
-
-React.memo won't work if the component uses "children" because App.jsx once we change the value of the state "counter" will re-render the whole componet so also children (the HTML elements we pass)
-
-## what is children?
-
-children is a special prop, that can be used to render the content included between the opening and closing tags when invoking a component. These kinds of components are identified by the official documentation as “boxes”.
+Split the code in App.jsx and create **_only_** a single **_Post_** component.
+This component can contain different HTML.
+In App.jsx we can return only 3 Post components and the "<div className="App">" container.
+Find the best way to do that.
