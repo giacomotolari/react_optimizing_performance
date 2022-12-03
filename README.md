@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
+=======
+# Props Exercise - Blog Page
+>>>>>>> 9809604 (create children-problem)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<<<<<<< HEAD
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +73,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+In App.jsx we have three "<section>", each section is a post.
+You can see that each section contain almost the same HTMl.
+
+## Task
+
+Split the code in App.jsx and create **_only_** a single **_Post_** component.
+This component can contain different HTML.
+In App.jsx we can return only 3 Post components and the "<div className="App">" container.
+Find the best way to do that.
+>>>>>>> 9809604 (create children-problem)
