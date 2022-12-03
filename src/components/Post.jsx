@@ -1,10 +1,13 @@
-const Post = ({ title }) => {
-  console.log(title);
+import React from "react";
+
+function Post({ title, articleText, children }) {
   return (
-    <div>
+    <section>
       <h2>{title}</h2>
-    </div>
+      <article>{articleText}</article>
+      {children}
+    </section>
   );
-};
+}
 
 export default Post;
