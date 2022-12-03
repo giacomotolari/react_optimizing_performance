@@ -31,14 +31,7 @@ function App() {
         </div>
       </Post>
 
-      <Post title="Post 3" articleText={article3}>
-        <hr />
-        <br />
-        <div>
-          <small>02.12.2022</small>
-          <p>Mr.James</p>
-        </div>
-      </Post>
+      <Post title="Post 3" articleText={article3} />
     </div>
   );
 }
