@@ -1,6 +1,7 @@
 import React from "react";
 
 function Post({ title, articleText, children }) {
+  console.log("title:", title);
   return (
     <section>
       <h2>{title}</h2>

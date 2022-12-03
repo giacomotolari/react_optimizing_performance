@@ -1,14 +1,41 @@
-# Props Exercise - Blog Page
+# React-optimizing-performance
 
-## what's going on?
+### What is performance in an app?
 
-In App.jsx we have three "<section>", each section is a post.
-You can see that each section contain almost the same HTMl.
+Performance has to do with how fast or slows your app loads if the app crashes when it reaches a peak in user activity, and how smooth certain features (like payments) work. Think App says: “Performance is a product of multiple factors: the server, mobile device, network, and programming of the app itself.”
 
+### How important is app performance?
+
+Most (70%) of mobile app users will abandon an app if it takes too long to load. A one-second delay in response can result in a 7% loss in conversion, and nearly one in every two apps are uninstalled within the first month of download.
+
+## How improve performance in React?
+
+There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf9hj, among the most important we have:
+
+- Use React.Fragments to Avoid Additional HTML Element Wrappers
+- Avoid using Index as Key for map
+- Optimizing the components with React Memo
+- Optimizing the functions components with useCallback and useMemo
+- Use lazy load component
+- Use lazy load image
+- Delete unused code and imports
+
+## what we will learn?
+
+- Optimizing the components with React Memo (branches: memo-problem, memo-solution)
+- Optimizing the functions components with useCallback and useMemo (branches: useCallback-problem and useMemo-solution)
+
+## What's going on?
+
+Why have a Blog-Page with three different posts, each post is a Post with different props-values.
+Each Post component has a console.log that print the props-title.
+If the console.log will print in the browser-console that's mind that the component re-renderd.
+If you click the **_increment button_** end look the console in the browser, you can see that each **_Post component_** and the **_App component_** re-render every time.
+
+## Why?
+
+In React if a component update his states, his childs and it self will be re-rendered.
 ## Task
 
-Split the code in App.jsx and create **_only_** a single **_Post_** component.
-This component can contain different HTML.
-
-In App.jsx we can return only 3 Post components and the "<div className="App">" container and "<h1>The Bad Blog</h1>".
-Find the best way to do that.
+Solve the problem!
+You would click the increment button and don't see the console.log(title) in each Post component.

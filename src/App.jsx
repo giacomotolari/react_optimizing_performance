@@ -2,12 +2,11 @@ import Post from "./components/Post";
 import "./styles/App.scss";
 import { useState } from "react";
 
-
 function App() {
   const [counter, setCounter] = useState(0);
 
   const increment = () => setCounter((prevCounter) => prevCounter + 1);
-  console.log("app-render")
+  console.log("app-render");
 
   const article1 =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetu ea quibusdam minus placeat consequuntur velit dicta, reprehenderit fuga iste blanditiis, consequatur molestias eos explicabo, praesentiumveritatis officia voluptate doloremque cupiditate! Culpa accusamusnecessitatibus asperiores iusto. Illum, eum soluta. Porro, essedolores, voluptatum modi omnis dicta minus ab consectetur totam assumenda ipsam. At expedita, ducimus veniam harum eum in sapiente.Laborum.";
@@ -20,6 +19,8 @@ function App() {
   return (
     <div className="App">
       <h1>The Bad Blog</h1>
+      <button onClick={increment}>increment</button>
+      <h3>{counter}</h3>
       <Post title="Post 1" articleText={article1}>
         <br />
         <hr />
@@ -46,13 +47,8 @@ function App() {
           <p>Mr.James</p>
         </div>
       </Post>
-      <button onClick={increment}>increment</button>
-      <h3>{counter}</h3>
-
     </div>
   );
 }
 
 export default App;
-
-
