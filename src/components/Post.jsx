@@ -1,4 +1,4 @@
-import React from "react";
+import { memo } from "react";
 
 function Post({ title, articleText, children }) {
   console.log("title:", title);
@@ -11,4 +11,4 @@ function Post({ title, articleText, children }) {
   );
 }
 
-export default Post;
+export default memo(Post);

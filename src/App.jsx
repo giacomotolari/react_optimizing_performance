@@ -1,6 +1,6 @@
 import Post from "./components/Post";
 import "./styles/App.scss";
-import { useState } from "react";
+import { useState, memo } from "react";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
@@ -41,6 +41,11 @@ function App() {
       </Post>
 
       <Post title="Post 3" articleText={article3} />
+      {/* change title-state to test React.memo */}
+      {/* <Post
+        title={`Post 3 ${isdarkMode ? "Light Mode" : "Dark Mode"}`}
+        articleText={article3}
+      /> */}
     </div>
   );
 }
