@@ -49,12 +49,6 @@ function App() {
           distinctio obcaecati ad corrupti nam mollitia rerum ab! Tempora
           nesciunt odit quos neque ducimus delectus.
         </article>
-        <hr />
-        <br />
-        <div>
-          <small>02.12.2022</small>
-          <p>Mr.James</p>
-        </div>
       </section>
     </div>
   );
