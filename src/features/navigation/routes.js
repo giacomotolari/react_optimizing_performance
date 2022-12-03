@@ -14,7 +14,7 @@ const routes = [
   { path: "*", element: <NotFound />, id: 4 },
   { path: "/", element: <Navigate to="/home" />, id: 5 },
   { path: "/blogs", element: <BlogPage />, id: 6 },
-  { path: "/images", element: <Images />, id: 7 },
+  { path: "/images/:cityName", element: <Images />, id: 7 },
   { path: "/blogs/:id", element: <Blog />, id: 8 },
 ];
 
