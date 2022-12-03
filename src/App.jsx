@@ -1,11 +1,12 @@
 import Post from "./components/Post";
 import "./styles/App.scss";
-import { useState, memo } from "react";
+import { useState } from "react";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
 
-  const setMode = () => setIsDarkMode(isdarkMode ? false : true);
+  // const setMode = () => setIsDarkMode(isdarkMode ? false : true);
+  const setMode = () => setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   console.log("app-render");
 
   const article1 =
