@@ -30,7 +30,7 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 Why have a Blog-Page with three different posts, each post is a Post with different props-values.
 Each Post component has a console.log that print the props-title.
 If the console.log will print in the browser-console that's mind that the component re-renderd.
-If you click the **_increment button_** end look the console in the browser, you can see that each **_Post component_** and the **_App component_** re-render every time.
+If you click the **mode button_** end look the console in the browser, you can see that each **_Post component_** and the **_App component_** re-render every time.
 
 ## Why?
 
@@ -38,4 +38,4 @@ In React if a component update his states, his childs and it self will be re-ren
 ## Task
 
 Solve the problem!
-You would click the increment button and don't see the console.log(title) in each Post component.
+You would click the button and don't see the console.log(title) in each Post component.
