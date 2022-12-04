@@ -1,71 +1,46 @@
-import React from "react";
-import { useEffect, useState } from "react";
-
-// import measureDuration from "./util/measureDuration";
-
-const List = ({ infos }) => {
-  return (
-    <ul>
-      {infos.map((info) => (
-        <li key={crypto.randomUUID()}>{info}</li>
-      ))}
-    </ul>
-  );
-};
+import { useMemo, useState, useCallback } from "react";
 
 const App = () => {
-  const [commentsInfos, setCommentsInfos] = useState({});
-  console.log("🚀 ~ file: App.jsx:7 ~ App ~ commentsInfos", commentsInfos);
-  const API_URL = "https://jsonplaceholder.typicode.com/comments";
-  const commentInfosKeys = Object.keys(commentsInfos);
-  const isCommentInfosEmpty = commentInfosKeys.length === 0;
-  // console.log(
-  //   measureDuration(function () {
-  //     let num = 0;
-  //     for (let i = 0; i < 100000; i++) {
-  //       num += i;
-  //     }
-  //     return num;
-  //   })
+  const [counter1, setCounter1] = useState(0);
+  const [counter2, setCounter2] = useState(0);
+  const [text, setTest] = useState("");
+
+  // const getSum = useCallback(
+  //   (num) => {
+  //     console.log("getSum");
+  //     return counter1 + 10 + num;
+  //   },
+  //   [counter1]
   // );
 
-  const getComments = async () => {
-    try {
-      const result = await fetch(API_URL);
-      const data = await result.json();
-      return data;
-    } catch (error) {
-      console.log("error", error);
-      return [];
-    }
+  const getSum = (num) => {
+    console.log("getSum");
+    return counter1 + 10 +num;
   };
 
-  const getCommentsInfos = async () => {
-    const comments = await getComments();
-    if (comments.length === 0) {
-      return {};
-    }
-    const names = comments.map((comment) => comment.name);
-    const emails = comments.map((comment) => comment.email);
-    const bodies = comments.map((comment) => comment.body);
-    const _commentInfos = {
-      names,
-      emails,
-      bodies,
-    };
-    setCommentsInfos(_commentInfos);
+  // const getText = useMemo(() => {
+  //   console.log("getText");
+  //   return `${counter2} + 10`;
+  // }, [counter2]);
+
+  const getText = () => {
+    console.log("getText");
+    return `${counter2} + 10`;
   };
 
   return (
     <div>
-      <button onClick={getCommentsInfos}>Get Comments Infos</button>
-      {!isCommentInfosEmpty &&
-        commentInfosKeys.map((commentInfosKey) => (
-          <section key={crypto.randomUUID()}>
-            <h2>{commentInfosKey}</h2>
-            <List infos={commentsInfos[commentInfosKey]} />
-          </section>
-        ))}
+      <button onClick={() => setCounter1((prev) => prev + 1)}>Counter 1</button>
+      <br />
+      <p>counter 1: {counter1}</p>
+      <br />
+      <button onClick={() => setCounter2((prev) => prev + 1)}>Counter 2</button>
+      <br />
+      <p>counter 2: {counter2}</p>
+      <br />
+      <p>sum: {getSum(7)}</p>
+      <br />
+      <p>text: {getText()}</p>
     </div>
   );
 };
