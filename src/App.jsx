@@ -1,12 +1,16 @@
 import Post from "./components/Post";
 import "./styles/App.scss";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 function App() {
   const [isdarkMode, setIsDarkMode] = useState(false);
+  const [counter, setCounter] = useState(0);
 
-  // const setMode = () => setIsDarkMode(isdarkMode ? false : true);
-  const setMode = () => setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
+  const setMode = useCallback(
+    () => setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode),
+    []
+  );
+
   console.log("app-render");
 
   const article1 =
@@ -17,12 +21,30 @@ function App() {
   const article3 =
     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit amet odit excepturi esse corporis inventore id aperiam ducimus consequuntur. Iste perferendis nemo, repudiandae id cum hic magni accusamus ipsa! Qui maiores perspiciatis quisquam explicabo nostrum, pariatur eveniet, tenetur sed placeat unde, exercitationem culpa hic distinctio obcaecati ad corrupti nam mollitia rerum ab! Tempora nesciunt odit quos neque ducimus delectus.";
 
+  const getTitle = useCallback(() => {
+    console.log("🚀 ~ file: App.jsx:20 ~ getTitle ~ getTitle");
+    return `Title ${counter}`;
+  }, [counter]);
+
+  useEffect(() => {
+    console.log("🚀 ~ file: App.jsx:20 ~ getTitle ~ useEffcet");
+    getTitle();
+  }, [getTitle]);
+
+  // const getTitle = () => {
+  //   console.log("🚀 ~ file: App.jsx:20 ~ getTitle ~ getTitle");
+  //   return `Title ${counter}`;
+  // };
+
+  // useEffect(() => {
+  //   console.log("🚀 ~ file: App.jsx:20 ~ getTitle ~ useEffcet");
+  //   getTitle();
+  // }, [counter, getTitle]);
+
   return (
     <div className={`App ${isdarkMode && "darkMode"}`}>
       <h1>The Bad Blog</h1>
-      <button onClick={setMode}>
-        {isdarkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+      <button onClick={setMode}>{isdarkMode ? "Light" : "Dark"} Mode</button>
       <Post title="Post 1" articleText={article1}>
         <br />
         <hr />
@@ -40,13 +62,10 @@ function App() {
           <p>Mr.Smith</p>
         </div>
       </Post>
-
-      <Post title="Post 3" articleText={article3} />
-      {/* change title-state to test React.memo */}
-      {/* <Post
-        title={`Post 3 ${isdarkMode ? "Light Mode" : "Dark Mode"}`}
-        articleText={article3}
-      /> */}
+      <button onClick={() => setCounter((prevCounter) => prevCounter + 1)}>
+        increment
+      </button>
+      <Post title={getTitle()} articleText={article3} />
     </div>
   );
 }
