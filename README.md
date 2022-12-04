@@ -29,12 +29,12 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 
 Why have a Blog-Page with three different posts, each post is a Post with different props-values.
 Each Post component has a console.log that print the props-title.
-If the console.log will print in the browser-console that's mind that the component re-renderd.
-If you click the **mode button_** end look the console in the browser, you can see that each **_Post component_** and the **_App component_** re-render every time.
+If the console.log will prints in the browser-console that means that the component re render.
+If you click the **mode button_** end look the console in the browser, you can see that each **_Post component_** and the **_App component_** re render every time.
 
 ## Why?
 
-In React if a component update his states, his childs and it self will be re-rendered.
+In React if a component updates his states, his childs and it self will be re render.
 ## Task
 
 Solve the problem!
