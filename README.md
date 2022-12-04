@@ -22,15 +22,16 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 
 ## what we will learn?
 
-By clicking the 'increment' button, we can see that the console.log(title) still appears in the 'Post' component which has as title-props: 'title 1' nostante we use react.memo
+Impove the performance by using React.memo.
 
 ## What's going on?
 
-In the componet Post we are passing in the props-obj children as property. Only Post-1 defines/uses in App.jsx what children is.
+Why have a Blog-Page with three different posts, each post is a Post with different props-values. Each Post component has a console.log that print the props-title. If the console.log will prints in the browser-console that means that the component re render. If you click the ***mode button*** end look the console in the browser, you can see that each Post component and the App component ***re render every time***.
 
 ## Why?
 
 In React if a component updates his states, his childs and it self will be re render.
+
 ## Task
 
-children is a special prop, automatically passed to every component, that can be used to render the content included between the opening and closing tags when invoking a component. These kinds of components are identified by the official documentation as “boxes”.
+Solve the problem!
