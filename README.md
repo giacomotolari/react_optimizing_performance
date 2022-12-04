@@ -22,20 +22,21 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 
 ## what we will learn?
 
-- Optimizing the components with React Memo (branches: memo-problem, memo-solution)
-- Optimizing the functions components with useCallback and useMemo (branches: useCallback-problem and useMemo-solution)
+Impove the performance by using React.memo.
 
 ## What's going on?
 
-Why have a Blog-Page with three different posts, each post is a Post with different props-values.
-Each Post component has a console.log that print the props-title.
-If the console.log will print in the browser-console that's mind that the component re-renderd.
-If you click the **mode button_** end look the console in the browser, you can see that each **_Post component_** and the **_App component_** re-render every time.
+Why have a Blog-Page with three different posts, each post is a Post with different props-values. Each Post component has a console.log that print the props-title. If the console.log will prints in the browser-console that means that the component re render. If you click the ***mode button*** end look the console in the browser, you can see that each Post component and the App component ***re render every time***.
 
 ## Why?
 
-In React if a component update his states, his childs and it self will be re-rendered.
+In React if a component updates his states, his childs and it self will be re render.
+
 ## Task
 
 Solve the problem!
-You would click the button and don't see the console.log(title) in each Post component.
+
+
+## React.memo 
+
+https://dmitripavlutin.com/use-react-memo-wisely/
