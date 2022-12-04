@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 function Post({ title, articleText, children }) {
   console.log("title:", title);
   return (
@@ -11,4 +9,4 @@ function Post({ title, articleText, children }) {
   );
 }
 
-export default memo(Post);
+export default Post;
