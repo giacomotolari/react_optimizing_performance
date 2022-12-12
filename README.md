@@ -1,10 +1,8 @@
-
 # React-optimizing-performance
 
 ### What is performance in an app?
 
 Performance has to do with how fast or slows your app loads if the app crashes when it reaches a peak in user activity, and how smooth certain features (like payments) work. Think App says: “Performance is a product of multiple factors: the server, mobile device, network, and programming of the app itself.”
->>>>>>> af5cb6d (update branch)
 
 ### How important is app performance?
 

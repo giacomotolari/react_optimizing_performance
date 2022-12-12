@@ -1,11 +1,12 @@
 import { Navigate } from "react-router-dom";
-import AboutUs from "../../pages/AboutUs";
-import Blog from "../../pages/Blog";
-import BlogPage from "../../pages/BlogPage";
-import Contact from "../../pages/Contact";
-import HomePage from "../../pages/HomePage";
-import Images from "../../pages/Images";
-import NotFound from "../../pages/NotFound";
+import { lazy } from "react";
+const AboutUs = lazy(() => import("../../pages/AboutUs"));
+const Blog = lazy(() => import("../../pages/Blog"));
+const BlogPage = lazy(() => import("../../pages/BlogPage"));
+const Contact = lazy(() => import("../../pages/Contact"));
+const HomePage = lazy(() => import("../../pages/HomePage"));
+const NotFound = lazy(() => import("../../pages/NotFound"));
+const Images = lazy(() => import("../../pages/Images"));
 
 const routes = [
   { path: "/home", element: <HomePage />, id: 1 },
