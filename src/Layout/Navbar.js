@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="container">
+    <nav id="Navbar">
       <ul>
         {items.map((item) => {
           return (
