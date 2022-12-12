@@ -7,9 +7,9 @@ function App() {
 import { useState } from "react";
 
 function App() {
-  const [counter, setCounter] = useState(0);
+  const [isdarkMode, setIsDarkMode] = useState(false);
 
-  const increment = () => setCounter((prevCounter) => prevCounter + 1);
+  const setMode = () => setIsDarkMode(isdarkMode ? false : true);
   console.log("app-render");
 
 >>>>>>> af5cb6d (update branch)
@@ -22,10 +22,11 @@ function App() {
     " Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit amet odit excepturi esse corporis inventore id aperiam ducimus consequuntur. Iste perferendis nemo, repudiandae id cum hic magni accusamus ipsa! Qui maiores perspiciatis quisquam explicabo nostrum, pariatur eveniet, tenetur sed placeat unde, exercitationem culpa hic distinctio obcaecati ad corrupti nam mollitia rerum ab! Tempora nesciunt odit quos neque ducimus delectus.";
 
   return (
-    <div className="App">
+    <div className={`App ${isdarkMode && "darkMode"}`}>
       <h1>The Bad Blog</h1>
-      <button onClick={increment}>increment</button>
-      <h3>{counter}</h3>
+      <button onClick={setMode}>
+        {isdarkMode ? "Light Mode" : "Dark Mode"}
+      </button>
       <Post title="Post 1" articleText={article1}>
         <br />
         <hr />
@@ -44,14 +45,7 @@ function App() {
         </div>
       </Post>
 
-      <Post title="Post 3" articleText={article3}>
-        <hr />
-        <br />
-        <div>
-          <small>02.12.2022</small>
-          <p>Mr.James</p>
-        </div>
-      </Post>
+      <Post title="Post 3" articleText={article3} />
     </div>
   );
 }
