@@ -13,6 +13,7 @@ function Images() {
     const data = await response.json();
     data.results.length === 0 ? navigate("/") : setPhotos(data.results);
   };
+  
   useEffect(() => {
     loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
