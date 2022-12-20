@@ -4,7 +4,6 @@
 ### What is performance in an app?
 
 Performance has to do with how fast or slows your app loads if the app crashes when it reaches a peak in user activity, and how smooth certain features (like payments) work. Think App says: “Performance is a product of multiple factors: the server, mobile device, network, and programming of the app itself.”
->>>>>>> af5cb6d (update branch)
 
 ### How important is app performance?
 
@@ -29,7 +28,9 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 ## What's going on?
 
 We have an App with several routes, when we load the App from the start all the project-files are loaded.
-You can look at this by exploring the dev tool (networks and sources).
+You can look at this by exploring the dev tool (sources).
+
+![loaded files](./src/assets/images/sources.png?raw=true "loaded files")
 
 ## Why?
 
