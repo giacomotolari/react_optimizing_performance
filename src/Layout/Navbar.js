@@ -1,9 +1,9 @@
-import { useNavigate, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { /*useNavigate,*/ NavLink } from "react-router-dom";
+// import { useState } from "react";
 
 const Navbar = () => {
-  const [city, setCity] = useState("");
-  const navigate = useNavigate();
+  // const [city, setCity] = useState("");
+  // const navigate = useNavigate();
 
   const items = [
     { name: "Home", to: "/home" },
@@ -22,7 +22,7 @@ const Navbar = () => {
             </li>
           );
         })}
-        <li>
+        {/* <li>
           <input
             type="text"
             value={city}
@@ -34,7 +34,7 @@ const Navbar = () => {
           >
             Search
           </button>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
