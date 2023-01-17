@@ -1,4 +1,4 @@
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState, useCallback, useEffect } from "react";
 
 const App = () => {
   const [counter1, setCounter1] = useState(0);
@@ -22,6 +22,15 @@ const App = () => {
     console.log("setTextState");
     return setTest(`${text} ${counter2}`);
   }, [counter2, text]);
+
+  // const setTextState = () => {
+  //   console.log("setTextState");
+  //   return setTest(`${text} ${counter2}`);
+  // };
+
+  useEffect(() => {
+    console.log("useEffect");
+  }, [setTextState]);
 
   return (
     <div>
