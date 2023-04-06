@@ -8,8 +8,9 @@ We want to use this array to create an iteration and display render each post co
 
 ## Task
 
-Split the code in App.jsx and create **_only_** a single **_Post_** component.
-This component can contain different HTML.
+The problem is that we want each Post component to contain different props.children or none at all.
 
-In App.jsx we can return only three Post components, the "div className="App"" container and the "h1" element.
-Find the best way to do that.
+
+## Solution 
+
+In this case, it is not recommended to use props.children, it is better to have components that return the same HTML structure, but if you still want to proceed along these lines, the best thing to do is to differentiate within the "map" function the objects in the array (e.g. with an id) and define how each individual component is to be rendered.
