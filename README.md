@@ -14,7 +14,7 @@ There are many factors https://www.codementor.io/blog/react-optimization-5wiwjnf
 -  Use React.Fragments to Avoid Additional HTML Element Wrappers
 -  Avoid using Index as Key for map
 -  Optimizing the components with React Memo
--  Optimizing the functions components with useCallback and useMemo
+-  Optimizing the logic in our components with useCallback and useMemo
 -  Use lazy load component
 -  Use lazy load image
 -  Load Component when is in the viewport 
@@ -23,5 +23,6 @@ https://stackoverflow.com/questions/53757229/reactjs-how-to-render-a-component-o
 
 ## what we will learn?
 
--  Optimizing the components with React Memo (branches: memo-problem, memo-solution)
--  Optimizing the functions components with useCallback and useMemo  (branches: useCallback-problem and useMemo-solution)
+-  Optimizing the components with React.Memo (branches: memo-problem, memo-solution)
+-  Decrease uploaded files whit React.Lazy (branches: lazy-load-component-problem, lazy-load-component-solution)
+-  Optimizing the logic in our components with React.useCallback and React.useMemo  (branches: useCallback-problem and useMemo-solution)
