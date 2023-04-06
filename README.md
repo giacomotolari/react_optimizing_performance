@@ -1,9 +1,10 @@
-# Props Exercise - Blog Page
+# Props Exercise - Blog Page - Props.Children - whit map.
 
 ## what's going on?
 
-In App.jsx we have a blog web page with three "section" elements, each section is a post.
-You can see that each section contain almost the same HTMl.
+We have a data.json file containing an array of posts.
+We want to use this array to create an iteration and display render each post component that takes data from each object.
+
 
 ## Task
 
