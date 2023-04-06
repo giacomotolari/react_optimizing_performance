@@ -23,6 +23,19 @@ https://stackoverflow.com/questions/53757229/reactjs-how-to-render-a-component-o
 
 ## what we will learn?
 
--  Optimizing the components with React.Memo (branches: memo-problem, memo-solution)
--  Decrease uploaded files whit React.Lazy (branches: lazy-load-component-problem, lazy-load-component-solution)
--  Optimizing the logic in our components with React.useCallback and React.useMemo  (branches: useCallback-problem and useMemo-solution)
+-  Optimizing the components with React.Memo ***(branches: memo-problem, memo-solution)***
+-  Decrease uploaded files whit React.Lazy ***(branches: lazy-load-component-problem, lazy-load-component-solution)***
+-  Optimizing the logic in our components with React.useCallback and React.useMemo  ***(branches: useCallback-problem and useMemo-solution)***
+-  Avoid repeated code using props.children  ***(branches: children-problem and children-solution)***
+<!-- -  Avoid "index" as key during an iteration whit map code using an unique id  ***(branches: key-index-problem and key-index-solution)*** -->
+
+
+"The reason why you should not use the index as the key in a map iteration in React is that it could cause issues with component reconciliation.
+
+When rendering a list of items in React, React keeps track of the items based on their key. This allows React to optimize performance by only making necessary changes when the list is modified. When you use the index as the key, you lose this optimization because React doesn't know which item has been modified.
+
+For example, if you have a list of items and you use the index as the key, when you remove an item from the beginning or middle of the list, all subsequent indices will be shifted up, and React will have to re-render all subsequent items even if they haven't been modified. This can have a significant performance impact, especially for long lists.
+
+Instead, it's better to use a unique and stable key for each item in the list. For example, if you have a list of objects with a unique ID, you can use this ID as the key. This way, when you remove an item from the list, React knows which item has been removed and can avoid re-rendering all subsequent items.
+
+In general, it's good practice to use a unique and stable key for each item in the list to ensure the best possible performance and proper component reconciliation in React."
