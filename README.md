@@ -11,4 +11,6 @@ Split the code in App.jsx and create **_only_** a single **_Post_** component.
 This component can contain different HTML.
 
 In App.jsx we can return only three Post components, the "div className="App"" container and the "h1" element.
+
+
 Find the best way to do that.
