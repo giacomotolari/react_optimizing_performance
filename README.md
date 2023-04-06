@@ -12,4 +12,4 @@ React.memo won't work if the component uses "children" because App.jsx once we c
 
 ## what is children?
 
-children is a special prop, automatically passed to every component, that can be used to render the content included between the opening and closing tags when invoking a component. These kinds of components are identified by the official documentation as “boxes”.
+Children is a special prop, automatically passed to every component, that can be used to render the content included between the opening and closing tags when invoking a component. These kinds of components are identified by the official documentation as “boxes”.
