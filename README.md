@@ -3,7 +3,7 @@
 ## what's going on?
 
 In App.jsx we have a blog web page with three <section> elements, each section is a post.
-You can see that each section contain almost the same HTMl.
+You can see that each section contain almost the same HTML.
 
 ## Task
 
