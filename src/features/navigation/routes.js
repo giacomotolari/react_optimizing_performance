@@ -1,9 +1,8 @@
-import { lazy } from "react";
 import { Navigate } from "react-router-dom";
-const AboutUs = lazy(() => import("../../pages/AboutUs"));
-const Contact = lazy(() => import("../../pages/Contact"));
-const HomePage = lazy(() => import("../../pages/HomePage"));
-const NotFound = lazy(() => import("../../pages/NotFound"));
+import AboutUs from "../../pages/AboutUs";
+import Contact from "../../pages/Contact";
+import HomePage from "../../pages/HomePage";
+import NotFound from "../../pages/NotFound";
 
 const routes = [
   { path: "/home", element: <HomePage /> },
@@ -11,7 +10,6 @@ const routes = [
   { path: "/contact/*", element: <Contact /> },
   { path: "*", element: <NotFound /> },
   { path: "/", element: <Navigate to="/home" /> },
-
 ];
 
 export default routes;
