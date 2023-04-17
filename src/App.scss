@@ -4,6 +4,10 @@
   box-sizing: 0;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 #Layout {
   min-height: 100vh;
   width: 100vw;
@@ -44,22 +48,6 @@
   main {
     min-height: 100vh;
     padding: 2%;
-
-    #Images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-items: center;
-
-      img {
-        border: 2px solid black;
-        box-shadow: 1px 1px 1px 1px rgb(56, 54, 54);
-      }
-    }
-  }
-
-  footer {
-    background-color: red;
   }
 
   .nested {
