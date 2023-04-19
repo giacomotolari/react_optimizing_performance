@@ -13,6 +13,7 @@ function App() {
 
   return (
     <Layout>
+      {/* Suspense is a component that takes a fallback prop that will be rendered while the component is loading */}
       <Suspense
         fallback={
           <MoonLoader

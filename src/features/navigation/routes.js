@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
 
+// import the components dynamically using React.lazy
 const AboutUs = lazy(() => import("../../pages/AboutUs"));
 const Contact = lazy(() => import("../../pages/Contact"));
 const HomePage = lazy(() => import("../../pages/HomePage"));
