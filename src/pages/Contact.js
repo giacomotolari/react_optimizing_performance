@@ -1,19 +1,24 @@
-import { Route, Routes } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
-import Download from "../pages/Download";
-import SideBar from "../Layout/SideBar";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [contactData, setContactData] = useState(null);
+
+  const handleClick = async () => {
+    // ContactData component is imported dynamically (only when the button is clicked)
+    // import() returns a promise 
+    const ContactData = await import("../components/ContactData");
+    // ".default" is needed because of the way the module is exported (default export)
+    setContactData(ContactData.default);
+    // ".ContactData()" is needed because of the way the module is exported (named export)
+    // setContactData(ContactData.ContactData());
+  };
+
   return (
-    <div>
-      <p>01512345678</p>
-      <SideBar />
-      <Routes>
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="download" element={<Download />} />
-      </Routes>
+    <div id="Contact">
+      <button onClick={handleClick}>Load Data</button>
+      {contactData}
     </div>
   );
 };
 
-export default Contact;
+export default Contact
