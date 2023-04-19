@@ -41,7 +41,7 @@ body {
     }
   }
   p {
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 }
@@ -52,7 +52,24 @@ body {
   justify-content: center;
   align-items: center;
 
+  button {
+    background-color: rgb(43, 124, 205);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+}
 
+#Contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
   button {
     background-color: rgb(43, 124, 205);

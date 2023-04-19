@@ -1,17 +1,10 @@
-import { Route, Routes } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
-import Download from "../pages/Download";
-import SideBar from "../Layout/SideBar";
+import React from "react";
+import ContactData from "../components/ContactData";
 
 const Contact = () => {
   return (
-    <div>
-      <p>01512345678</p>
-      <SideBar />
-      <Routes>
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="download" element={<Download />} />
-      </Routes>
+    <div id="Contact">
+      <ContactData />
     </div>
   );
 };

@@ -27,3 +27,7 @@ Create a loading animation with **_React.Suspense_** that alerts you when compon
 ## Task 3
 
 In the AboutUs Page there is a CompanyPhoto component, use **_React.Lazy_** to import it only when is needed.
+
+## Task 4
+
+In the Contact page import the component "ContactData" dynamically using dynamic import of javascript (not React.lazy).
