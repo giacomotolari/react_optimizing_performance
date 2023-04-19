@@ -24,7 +24,7 @@ https://stackoverflow.com/questions/53757229/reactjs-how-to-render-a-component-o
 ## what we will learn?
 
 -  Optimizing the components with React.Memo ***(branches: memo-problem, memo-solution)***
--  Decrease uploaded files whit React.Lazy ***(branches: lazy-load-component-problem, lazy-load-component-solution)***
+-  Decrease uploaded files whit React.Lazy ***(branches: lazy-load-problem, lazy-load-solution)***
 -  Optimizing the logic in our components with React.useCallback and React.useMemo  ***(branches: useCallback-problem and useMemo-solution)***
 -  Avoid repeated code using props.children  ***(branches: children-problem and children-solution)***
 <!-- -  Avoid "index" as key during an iteration whit map code using an unique id  ***(branches: key-index-problem and key-index-solution)*** -->
