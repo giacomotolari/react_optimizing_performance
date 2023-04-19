@@ -1,10 +1,17 @@
+import { useState } from "react";
+import CompanyPhoto from "../components/CompanyPhoto";
 
 const AboutUs = () => {
-
+  const [showPhoto, setShowPhoto] = useState(false);
   return (
-    <>
-      <p>This is About Us Page</p>
-    </>
+    <div id="About">
+      <br />
+      <p>About Us </p>
+      <button onClick={() => setShowPhoto(!showPhoto)}>
+        {showPhoto ? "hide photo" : "show photo"}
+      </button>
+      {showPhoto && <CompanyPhoto />}
+    </div>
   );
 };
 
