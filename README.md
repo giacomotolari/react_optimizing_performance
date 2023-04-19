@@ -1,4 +1,3 @@
-
 # React.Lazy
 
 ## what we will learn?
@@ -23,8 +22,8 @@ Fix the problem with React.lazy
 
 ## Task 2
 
-Create a loading animation with ***React.Suspense*** that alerts you when components required by ***React.Lazy*** are loading.
+Create a loading animation with **_React.Suspense_** that alerts you when components required by **_React.Lazy_** are loading.
 
 ## Task 3
 
-In the AboutUs Page there is a company-photo, use ***React.Lazy*** to import the photo only when is needed.
+In the AboutUs Page there is a CompanyPhoto component, use **_React.Lazy_** to import it only when is needed.
