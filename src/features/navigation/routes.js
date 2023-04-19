@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { Navigate } from "react-router-dom";
+
 const AboutUs = lazy(() => import("../../pages/AboutUs"));
 const Contact = lazy(() => import("../../pages/Contact"));
 const HomePage = lazy(() => import("../../pages/HomePage"));
@@ -11,7 +12,6 @@ const routes = [
   { path: "/contact/*", element: <Contact /> },
   { path: "*", element: <NotFound /> },
   { path: "/", element: <Navigate to="/home" /> },
-
 ];
 
 export default routes;

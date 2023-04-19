@@ -17,6 +17,14 @@ You can look at this by exploring the dev tool (sources).
 
 This is normal, as default it works like this.
 
-## Task
+## Task 1
 
 Fix the problem with React.lazy
+
+## Task 2
+
+Create a loading animation with ***React.Suspense*** that alerts you when components required by ***React.Lazy*** are loading.
+
+## Task 3
+
+In the AboutUs Page there is a company-photo, use ***React.Lazy*** to import the photo only when is needed.

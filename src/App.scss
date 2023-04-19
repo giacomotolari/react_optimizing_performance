@@ -4,7 +4,7 @@
   box-sizing: 0;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -44,13 +44,24 @@ body{
     font-size: 3rem;
     text-align: center;
   }
+}
 
-  main {
-    min-height: 100vh;
-    padding: 2%;
-  }
+#About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  .nested {
-    background-color: antiquewhite;
+
+
+  button {
+    background-color: rgb(43, 124, 205);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    cursor: pointer;
   }
 }
