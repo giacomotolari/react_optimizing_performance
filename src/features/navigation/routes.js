@@ -7,7 +7,7 @@ import NotFound from "../../pages/NotFound";
 const routes = [
   { path: "/home", element: <HomePage /> },
   { path: "/about-us", element: <AboutUs /> },
-  { path: "/contact/*", element: <Contact /> },
+  { path: "/contact", element: <Contact /> },
   { path: "*", element: <NotFound /> },
   { path: "/", element: <Navigate to="/home" /> },
 ];
