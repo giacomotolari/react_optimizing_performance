@@ -9,5 +9,4 @@ function ContactData() {
   );
 }
 
-// export { ContactData };
 export default ContactData;
